@@ -4,14 +4,91 @@
     background-color: rgb(240, 177, 198);
     left: 50px;
     position: relative;
+    display: flex ;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     left: 200px;
 }
 
 .quadradinho {
-    position: absolute;
-    top: 50px;
-    left: 100px;
     background-color: paleturquoise;
     width: 100px;
     height: 100px;
+
 }
+
+.azul {
+    background-color: blue;
+    width: 200px;
+    height: 200px;
+    display: flex;
+}
+
+.laranja {
+    background-color: orange;
+    width: 50px;
+    height: 50px;
+}
+
+.container {
+    height: 100vh;
+   
+}
+
+.l1 {
+    height: 30%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 100px;
+
+}
+
+.esquerda-acima {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.meio1-acima {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.meio2-acima {
+    flex-direction:row;
+    justify-content: space-between;
+    align-items:center;
+}
+
+.direita-acima {
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+}
+
+.esquerda-meio {
+ 
+    flex-direction: column;
+    align-items:center;
+}
+
+.meio-meio {
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.linha {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.linha2 {
+    justify-content: space-between;
+}
+
