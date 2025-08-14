@@ -1,0 +1,105 @@
+.cabecalho {
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0;
+    height: 12vh;
+
+}
+
+.logo {
+    width: 150px;
+    height:fit-content;
+}
+
+.headertext {
+    color: white;
+}
+
+.esq {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    margin-left: 5vw;
+}
+
+.dir {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+    margin-right: 5vw;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.img1 {
+    width: 30vw;
+    margin-left: 10vw;
+}
+
+body {
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    margin: 0px;
+    gap: 10vh;
+}
+
+.roboto-texto {
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    text-align: justify;
+    width: 50vw;
+    margin-right: 10vw;
+    font-variation-settings: "wdth" 100;
+}
+
+.roboto-texto2 {
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    text-align: justify;
+    width: 50vw;
+    margin-left: 10vw;
+    font-variation-settings: "wdth" 100;
+}
+
+.l1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 10vw;
+}
+
+.titulo {
+    font-style: bold;
+    font-weight: 900;
+    font-size: 5vh;
+  
+}
+
+footer {
+    background-color: black;
+    height: 12vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img2 {
+    width: 30vw;
+    margin-right: 10vw;
+}
+
+.pe {
+    color: white;
+    font-size: medium;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
