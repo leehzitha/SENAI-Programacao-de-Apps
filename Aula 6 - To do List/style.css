@@ -1,0 +1,89 @@
+.box {
+    background-color: white;
+    padding: 3vw 8vh;
+    margin-top: 5vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4vh;
+    box-shadow: 2px 2px 8px rgb(204, 200, 200);
+    border-radius: 10px;
+}
+
+body {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.text {
+    color: black;
+    font-family: "Nata Sans", sans-serif;
+    font-weight: 450;
+    font-style: normal;
+    font-size: xx-large;
+
+    
+}
+
+.inpute {
+    border: 0px;
+    padding: 1vw 2vh;
+    box-shadow: 2px 2px 8px rgb(230, 227, 227);
+    text-align: left;
+    border-radius:  5px 0px 0px 5px;
+    font-family: "Nata Sans", sans-serif;
+    
+
+}
+
+.add {
+    background-color: rgb(25, 185, 25);
+    box-shadow: 2px 2px 8px #e6e3e3;
+    border: 0px;
+    padding: 1vw 2vh;
+    border-radius: 0px 5px 5px 0px;
+    font-family: "Nata Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: small;
+}
+ 
+.inputs {
+    display: flex;
+    flex-direction: row;
+    gap: 0px
+}
+
+.tarefa {
+    box-shadow: 2px 2px 8px #e6e3e3;
+    width: 30vw;
+    display: flex;
+    font-family: "Nata Sans", sans-serif;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0vh 1vw;
+    font-weight: 600;
+}
+
+.tasks {
+    display: flex;
+    flex-direction: column;
+    gap: 1vh
+}
+
+.complete {
+    margin-top: 0.7vw;
+    margin-bottom: 0.7vw;
+    background-color:  rgb(25, 185, 25);
+    border: 0px;
+    font-family: "Nata Sans", sans-serif;
+    font-size: small;
+    padding: 0.7vh 1vw;
+    border-radius: 5px;
+
+}
+
+
