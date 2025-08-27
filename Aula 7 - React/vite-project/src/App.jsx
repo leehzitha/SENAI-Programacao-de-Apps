@@ -15,6 +15,7 @@ const App = () =>{
       <div className='tela'>
         <div className='quadrado vermelho'></div>
         <div className='quadrado azul'></div>
+        <div className='quadrado amarelo'></div>
       </div>
       
     </>

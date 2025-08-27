@@ -49,8 +49,13 @@
   background-color: blue;
 }
 
+.amarelo {
+  background-color: yellow;
+}
+
 .quadrado {
-  padding: 100px;
+  padding: 250px;
+
 }
 
 .tela {
