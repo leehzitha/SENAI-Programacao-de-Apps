@@ -7,6 +7,8 @@ import Timer from './Components/Timer/Timer'
 import Counter from './Components/Counter/Counter'
 import AlterTitle from './Components/AlterTitle/AlterTitle'
 import DivColor from './Components/DivColor/DivColor'
+import TrafficLights from './Components/TrafficLights/TrafficLights'
+import ParOuImpar from './Components/ParOuImpar/ParOuImpar'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -23,6 +25,10 @@ function App() {
       <AlterTitle></AlterTitle>
       {/* exercicio 5 */}
       <DivColor></DivColor>
+      {/* exercicio 4 */}
+      <TrafficLights></TrafficLights>
+      {/* exercicio 5 */}
+      <ParOuImpar></ParOuImpar>
     </>
   )
 }
