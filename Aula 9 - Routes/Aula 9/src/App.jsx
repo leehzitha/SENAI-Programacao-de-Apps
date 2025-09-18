@@ -8,6 +8,8 @@ import About from './pages/About';
 import Profile from './pages/Profile';
 import Product from './pages/Product';
 import User from './pages/User';
+import UserPage from './pages/UserPage';
+import UserList from './pages/UserList';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -33,6 +35,8 @@ function App() {
         <Route path="/profile/:id" element={<Profile/>}/>
         <Route path="/products/:category/:id" element={<Product/>}/>
         <Route path="/users/:id" element={<User/>}/>
+        <Route path="/userpage/:id" element={<UserPage/>}/>
+
       </Routes>
   </>
   )
