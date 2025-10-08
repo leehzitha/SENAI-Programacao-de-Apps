@@ -1,9 +1,9 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
-import './App.css'
-import Cartoon2D from './Pages/cartoon2D'
 import { BrowserRouter, Route, Routes} from 'react-router-dom'
+import Agent from './Pages/Agent'
+import Home from './Pages/Home'
 
 
 function App() {
@@ -12,8 +12,9 @@ function App() {
   return (
     <>
       <Routes>
-        <Route path='/cartoons2D' element={<Cartoon2D></Cartoon2D>}></Route>
-        <Route path='/' element={<Cartoon2D></Cartoon2D>}></Route>
+        <Route path='/' element={<Home></Home>}></Route>
+        <Route path='/agents' element={<Home/>}/>
+        <Route path="/agent" element={<Agent/>}/>
       </Routes>
     </>
   )
