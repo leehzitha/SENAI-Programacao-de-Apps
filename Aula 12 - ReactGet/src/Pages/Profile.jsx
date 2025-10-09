@@ -22,9 +22,6 @@ export default function Profile(){
                     <p className=" font-bold">Telefone</p>
                     <p>{user.phone}</p>
                 </div>
-                
-                
-                
             </div>
         </div>
     );
