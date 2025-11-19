@@ -1,7 +1,9 @@
-import { StyleSheet, Text, TextInput, View, TouchableOpacity } from "react-native";
+import { StyleSheet, Text, TextInput, View, TouchableOpacity, Alert } from "react-native";
 import { createUserWithEmailAndPassword, getAuth } from 'firebase/auth';
 import { app } from '../firebaseConfig.js'
 import { useEffect, useState } from "react";
+import { Link, router } from "expo-router";
+import Swal from 'sweetalert2';
 
 
 export default function HomeScreen() {
@@ -10,12 +12,50 @@ export default function HomeScreen() {
     const [confirmPassword, setConfirmPassword] = useState("");
 
     const auth = getAuth(app);
+    const minPassword = 6;
 
-    const signUp = () => {
-        if(password == confirmPassword){
-            createUserWithEmailAndPassword(auth, email, password)
+    const signUp = async() => {
+        if (password.length < minPassword) {
+            
+            Swal.fire({
+                icon: 'error',
+                title: 'Erro',
+                text: 'Password must contain at least 6 characters'
+            })
+
+            return;
+
         }
+        if (password != confirmPassword) {
+            return (Swal.fire({
+                icon: 'error',
+                title: 'Error',
+                text: "Passwords doesn't match!"
+            }))
+        }
+        try {
+            await createUserWithEmailAndPassword(auth, email, password);
+            
+            Swal.fire({
+                icon: 'success',
+                title: 'Success',
+                text: 'Account created!'
+            });
+
+            return router.navigate('/login')
+        }
+        catch(e) {
+
+            return (Swal.fire({
+                icon: 'error',
+                title: 'Error',
+                text: 'Email already in use!'
+            }))
+        }
+        
+
     }
+
     useEffect(() => {
         console.log(email, password, confirmPassword)
     }, [email, password, confirmPassword])
@@ -30,7 +70,19 @@ export default function HomeScreen() {
                 <TouchableOpacity style={styles.button} onPress={() => signUp()}>
                 <View style={{justifyContent: "center", alignItems: "center"}}>
                     <Text style={{color: "white"}}>Register</Text>
-                </View></TouchableOpacity>
+                </View>
+                </TouchableOpacity>
+                <View style={{display: 'flex', flexDirection: 'row', gap: 10, justifyContent: 'center', marginTop: 10}}>
+                    <Text style={{fontSize: 12}}>Already have an account?</Text>
+                    {/* <TouchableOpacity onPress={() => router.navigate('/login')}>
+                        <View>
+                            <Text style={{fontSize: 12, color: 'orange'}}>Sign in</Text>
+                        </View>
+                    </TouchableOpacity> */}
+                    <TouchableOpacity onPress={() => console.log('botão clicado!')}>
+                        <Link href={'/login'} style={{fontSize: 12, color: 'orange'}}>Sign In</Link>
+                    </TouchableOpacity>
+                </View>
             </View>
 
         </View>
