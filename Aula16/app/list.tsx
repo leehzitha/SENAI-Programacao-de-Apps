@@ -89,6 +89,7 @@ export default function SongList() {
       </View>
     )
   }
+  
   return (
     <View style={{ padding: 20 }}>
       <Text style={{ fontSize: 24, fontWeight: 'bold', marginBottom: 15}}>
